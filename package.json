@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "vitepress": "^0.21.6"
+  },
+  "name": "yellowrush",
+  "version": "1.0.0",
+  "description": "programming daily life japanese and etc.",
+  "main": "index.js",
+  "repository": "git@github.com:yellowrush888/jbook.git",
+  "author": "tom huang",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
+  }
+}
