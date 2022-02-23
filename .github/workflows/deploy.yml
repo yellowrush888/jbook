@@ -16,7 +16,11 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
-      - run: npm install -g bats
-      - run: bats -v
+      - run: npm install
+      - run: npm run build
       - run: |
-          git update-index --chmod=+x ./deploy.sh && npm run deploy
+          cd docs/.vitepress/dist &&
+          git init &&
+          git add -A &&
+          git commit -m '发布`date`' &&
+          git push -f git@github.com:yellowrush888/jbook.git master:gh-pages
