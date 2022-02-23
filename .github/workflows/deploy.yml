@@ -18,5 +18,5 @@ jobs:
           node-version: '16'
       - run: npm install -g bats
       - run: bats -v
-      - run: git update-index --chmod=+x ./deploy.sh
-      - run: npm run deploy
+      - run: |
+          git update-index --chmod=+x ./deploy.sh && npm run deploy
